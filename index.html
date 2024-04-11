@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Meeting Minutes</title>
+    <meta charset="UTF-8">
+    <link rel="apple-touch-icon" sizes="180x180" href="/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icon/favicon-16x16.png">
+    <link rel="manifest" href="/icon/">
+  </head>
+  <body>
+    <header>
+        <h1>Meeting 1</h1>
+        <nav> 
+            <a href="#">Home</a> | 
+            <a href="#attendance">Attendance</a> | 
+            <a href="#agenda">Agenda</a> | 
+            <a href="#lastmeeting">Unfinished Business</a> |
+            <a href="thismeeting">New Business</a> |
+            <a href="#feedback">Feedback</a>
+        </nav>
+    </header>
+    <main>
+        <br>
+        <hr>
+        <h2 id="attendance">Attendance</h2>
+        <ul>
+            <li>Rona</li>
+            <li>blank</li>
+            <li>blank</li>
+            <li>blank</li>
+        </ul>
+        <hr>
+        <h2 id="agenda"> Agenda</h2>
+            <ol>
+                <li>blank</li>
+                <li>blank</li>
+                <li>blank</li>
+                <li>blank</li>
+            </ol>
+        <hr>
+        <h2 id="lastmeeting">From last meeting...</h2>
+        <hr>
+        <h2 id="thismeeting">Current</h2>
+        <hr>
+        <h2 id="feedback">Feedback</h2>
+        <p>Please fill this out to provide feedback and set a time for the next meeting.</p>
+        <form> 
+            <fieldset> 
+                <h3>Information</h3>
+                    <label for="name">Full name:</label>
+                    <input type="text" id="name" name="name"><br><br>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email"><br><br>
+                    <label for="date">Today's date:</label>
+                    <input type="date" id="date" name="date"><br><br>
+                
+                <h3>Next Meeting</h3>
+                <p>We are looking to have Meeting 2 next week. Select the days and times that work for you.</p>
+                <input type="checkbox" id="mon" name="mon">
+                <label for="mon">Monday</label>
+                <input type="checkbox" id="tues" name="tues">
+                <label for="tues">Tuesday</label>
+                <input type="checkbox" id="wed" name="wed">
+                <label for="wed">Wednesday</label>
+                <input type="checkbox" id="thur" name="thur">
+                <label for="thur">Thursday</label>
+                <input type="checkbox" id="fri" name="fri">
+                <label for="fri">Friday</label>
+                <br><br>
+                <label for="time">Time:</label>
+                <input list="times" name="time" id="time">
+                <datalist id="times">
+                    <option value="5 PM"> 
+                    <option value="6 PM">
+                    <option value="7 PM">
+                    <option value="8 PM">
+                </datalist>
+                    
+                <h3>Feedback</h3>
+                    <label for="rating">How was the meeting? Please rate from 1 (<i>awful</i>) to 5 (<i>awesome!</i>)</label> 
+                    <select id="rating">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                    <br><br>
+                    <label for="anon">Do you wish for your feedback to remain <b>anonymous</b>?</label>
+                    <input type="radio" id="anon" name="anon">Yes 
+                    <input type="radio" id="anon" name="anon">No 
+                    <br><br>
+                    <label for="feedtext">Do you have suggestions?</label><br>
+                    <textarea id="feedtext" name="feedtext" rows="4" cols="50">Provide feedback here.</textarea>
+                    <br><br>
+                    <button type="submit">Submit</button>
+            </fieldset>
+        </form>
+    </main>
+    <footer>
+
+    </footer>
+  </body>
+</html>
