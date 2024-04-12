@@ -17,7 +17,8 @@
             <a href="#agenda">Agenda</a> | 
             <a href="#lastmeeting">Unfinished Business</a> |
             <a href="thismeeting">New Business</a> |
-            <a href="#feedback">Feedback</a>
+            <a href="#feedback">Feedback</a> |
+            <a href="#recording">Recording</a>
         </nav>
     </header>
     <main>
@@ -27,22 +28,44 @@
         <ul>
             <li>Rona</li>
             <li>blank</li>
-            <li>blank</li>
-            <li>blank</li>
         </ul>
         <hr>
         <h2 id="agenda"> Agenda</h2>
             <ol>
-                <li>blank</li>
+                <li>Recap of last meeting</li>
                 <li>blank</li>
                 <li>blank</li>
                 <li>blank</li>
             </ol>
         <hr>
-        <h2 id="lastmeeting">From last meeting...</h2>
+        
+        <h2 id="lastmeeting">From last meeting</h2>
+        <section>
+            <h3>blank</h3>
+        </section>
+        <section>
+            <h3>blank</h3>
+        </section>
         <hr>
+        
         <h2 id="thismeeting">Current</h2>
+        <section>
+            <h3>blank</h3>
+        </section>
+        <section>
+            <h3>blank</h3>
+        </section>
+        <div class="action-items">
+            <h3><span>Action Items</span></h3>
+        </div>
+        <h3>Summary</h3>
+        <details>
+            <summary>Find a <span>summary</span> of the meeting below</summary>
+            <p></p>
+        </details>
+        <br>
         <hr>
+        
         <h2 id="feedback">Feedback</h2>
         <p>Please fill this out to provide feedback and set a time for the next meeting.</p>
         <form> 
@@ -56,21 +79,24 @@
                     <input type="date" id="date" name="date"><br><br>
                 
                 <h3>Next Meeting</h3>
-                <p>We are looking to have Meeting 2 next week. Select the days and times that work for you.</p>
-                <input type="checkbox" id="mon" name="mon">
-                <label for="mon">Monday</label>
-                <input type="checkbox" id="tues" name="tues">
-                <label for="tues">Tuesday</label>
-                <input type="checkbox" id="wed" name="wed">
-                <label for="wed">Wednesday</label>
-                <input type="checkbox" id="thur" name="thur">
-                <label for="thur">Thursday</label>
-                <input type="checkbox" id="fri" name="fri">
-                <label for="fri">Friday</label>
+                <p>We are looking to have Meeting 2 next week on Tuesday 4/16. Select the time(s) that work for you.</p>
+                <input type="checkbox" id="3" name="3">
+                <label for="3">3 PM</label>
+                <input type="checkbox" id="4" name="4">
+                <label for="4">4 PM</label>
+                <input type="checkbox" id="5" name="5">
+                <label for="5">5 PM</label>
+                <input type="checkbox" id="6" name="6">
+                <label for="6">6 PM</label>
+                <input type="checkbox" id="7" name="7">
+                <label for="7">7 PM</label>
+                
                 <br><br>
-                <label for="time">Time:</label>
+                <label for="time">What is your most preferred time?</label>
                 <input list="times" name="time" id="time">
                 <datalist id="times">
+                    <option value="3 PM">
+                    <option value="4 PM">
                     <option value="5 PM"> 
                     <option value="6 PM">
                     <option value="7 PM">
@@ -97,9 +123,23 @@
                     <button type="submit">Submit</button>
             </fieldset>
         </form>
+        <br>
+        <hr>
+        
+        <h2 id="recording">Recording</h2>
+        <p>Please find the audio and video files of this meeting below.</p>
+        <audio controls> 
+            <source src="" type=""> 
+            Your browser does not support the audio tag. 
+        </audio>
+        <br><br>
+        <video width="320" height="240" controls> 
+            <source src="" type=""> 
+            Your browser does not support the video tag. 
+        </video>
     </main>
     <footer>
-
+        <p>Site made by Rona Darabi</p>
     </footer>
   </body>
 </html>
