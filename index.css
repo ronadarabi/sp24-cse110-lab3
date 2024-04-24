@@ -92,7 +92,7 @@ footer {
     position: relative;
     grid-area: nav;
 
-    /*& .nav-toggle { 
+    & .nav-toggle { 
         position: absolute; 
         cursor: pointer; 
         margin: 0rem 1rem; 
@@ -113,7 +113,7 @@ footer {
 
     & .nav-checkbox { 
         display: none;
-    }*/
+    }
 
 
     & ul { 
