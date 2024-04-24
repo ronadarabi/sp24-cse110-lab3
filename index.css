@@ -1,18 +1,42 @@
 /* Font */
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
-
-:scope { 
-    background-color: lavender;
-    height: 100vh; 
-    width: 100vw;
-    margin: unset;
+:root { 
+    --bluish: rgb(93, 93, 163);
 }
+
+* { 
+    background-color: lavender;
+}
+
+section > h2 { 
+    color: hsl(147, 55%, 61%);
+}
+
+
+
+input, label {
+    border: none;
+}
+
+h2 + ul { 
+    color: grey;
+}
+
+[class="main"] { 
+    color: var(--bluish, blue);
+}
+
+h2:has(+p) { 
+    color: orange;
+}
+
 
 body { 
     margin: unset;
     height: 100vh;
     width: 100vw;
+    border-width: 1pt;
     margin-left:0;
     margin-right:0;
     margin-bottom:1%;
@@ -21,10 +45,52 @@ body {
 
 }
 
+.container { 
+    grid-template-columns: 1fr;
+    grid-template-rows: .4fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr .2fr;
+    grid-template-areas: 
+        "nav"
+        "attendance"
+        "agenda"
+        "action-items"
+        "main"
+        "summary"
+        "av"
+        "form"
+        "footer";
+}
+
+#attendance { 
+    grid-area: attendance;
+}
+#agenda { 
+    grid-area: agenda;
+}
+#action-items { 
+    grid-area: action-items;
+}
+#main { 
+    grid-area: main;
+}
+#summary { 
+    grid-area: summary;
+}
+#av { 
+    grid-area: av;
+}
+#feedback { 
+    grid-area: feedback;
+    border-color: white;
+}
+footer { 
+    grid-area: footer;
+}
+
 /* Navigation bar */
 .nav { 
     color: #000;
     position: relative;
+    grid-area: nav;
 
     & .nav-toggle { 
         position: absolute; 
@@ -52,6 +118,7 @@ body {
     & ul { 
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
         gap: 2rem;
         align-items: center; 
         margin: 1rem; 
@@ -85,6 +152,7 @@ body {
 
 #nav-checkbox:checked ~ ul li { 
     display: block;
+    border-style: none;
 }
 
 #nav-checkbox:checked ~ label.nav-toggle .close { 
@@ -95,13 +163,26 @@ body {
     display: none;
 }
 
+.submit-button { 
+    width: 10em;
+    height: 3em; 
+    background-color: greenyellow;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+}
+
+.submit-button:active { 
+    box-shadow: 2px 2px 5px green;
+}
 
 
 /* Responsive design */
 /* Desktop */ 
-@media screen and (min-width: 560px) { 
+@media screen and (min-width: 560px) and (max-width:3000px) { 
     .nav {
-        background: lightcyan;
         grid-area: nav;
         & .nav-toggle { 
             display: none;
@@ -119,7 +200,7 @@ body {
         display: grid; 
         height: 100vh; 
         grid-template-columns: repeat(3,1fr);
-        grid-template-rows: .2fr 1fr 1fr 1fr 1fr .8fr;  
+        grid-template-rows: .8fr 1fr 1fr 1fr 1fr .2fr;  
         grid-template-areas: 
             "nav nav nav"
             "attendance agenda action-items"
@@ -129,36 +210,5 @@ body {
             "footer footer footer";
         grid-gap: 0.2rem;
     }
-    #attendance { 
-        background: green;
-        grid-area: attendance;
-    }
-    #agenda { 
-        background: teal;
-        grid-area: agenda;
-    }
-    #action-items { 
-        background: lightseagreen;
-        grid-area: action-items;
-    }
-    #main { 
-        background: lightskyblue;
-        grid-area: main;
-    }
-    #summary { 
-        background: lightgreen; 
-        grid-area: summary;
-    }
-    #av { 
-        background: seagreen;
-        grid-area: av;
-    }
-    #feedback { 
-        background: lightblue;
-        grid-area: feedback;
-    }
-    footer { 
-        background: lavenderblush;
-        grid-area: footer;
-    }
+    
 }

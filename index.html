@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="index.css"> 
   </head>
 
-  <div class="container"> 
+  <body class="container"> 
     <!--Row 1: Navigation-->
     <nav class="nav"> 
         <input type="checkbox" id="nav-checkbox" class="nav-checkbox">
@@ -76,27 +76,24 @@
     </section>
 
     <!--Row 3: Main-->
-    <section id="main"> 
+    <section id="main" class="main"> 
         <h2>Item</h2>
+        <p>la di da di da</p>
     </section>
 
     <!--Row 4: Summary-->
     <section id="summary">
         <h2>Summary</h2>
+        <p>la di da di da</p>
     </section>
-    
+
     <section id="av">
-        <audio controls> 
-            <source src="media/audio1140060813.m4a" type="audio/mp4"> 
-            Your browser does not support the audio tag. 
-        </audio>
         <br><br>
         <video controls> 
             <source src="media/video1140060813.mp4" type="video/mp4"> 
             Your browser does not support the video tag. 
         </video>
     </section>
-
     <!--Row 5: Feedback Form-->
     <section id="feedback">
         <h2>Feedback</h2>
@@ -114,7 +111,7 @@
                     <br>
 
                     <!--Rating WIP-->
-                    <fieldset class="rating">
+                    <div class="rating">
                         <input type="radio" id="0" name="rating" value="0">
                         <label for="0" class="star" value="0"></label>
                         
@@ -132,13 +129,13 @@
                         
                         <input type="radio" id="5" name="5">
                         <label for="5" value="5" class="star"><span class="s">★</span></label>
-                    </fieldset>
+                    </div>
 
                     <br><br>
                     <label for="feedtext">Do you have suggestions?</label><br>
                     <textarea id="feedtext" name="feedtext" rows="4" cols="50">Provide feedback here.</textarea>
                     <br><br>
-                    <button type="submit">Submit</button>
+                    <button type="submit" class="submit-button">Submit</button>
             </fieldset>
         </form>
     </section>   
@@ -147,12 +144,13 @@
     <footer>
         <p>Site made by Rona Darabi</p>
     </footer>
-</div>
+</body>
 
 <style>
     footer { 
         text-align: center;
         padding: .5rem 0 .5rem 0;
+        margin: auto;
     }
 </style>
 
