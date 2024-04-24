@@ -92,7 +92,7 @@ footer {
     position: relative;
     grid-area: nav;
 
-    & .nav-toggle { 
+    /*& .nav-toggle { 
         position: absolute; 
         cursor: pointer; 
         margin: 0rem 1rem; 
@@ -113,7 +113,8 @@ footer {
 
     & .nav-checkbox { 
         display: none;
-    }
+    }*/
+
 
     & ul { 
         display: flex;
@@ -127,10 +128,11 @@ footer {
             list-style: none;
             display: none;
 
-            &:first-child { 
-                margin-right: auto;
-                display: block;
-            }
+        }
+
+        li:first-child { 
+            margin-right: auto;
+            display: block;
         }
     }
 
