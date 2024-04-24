@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <title>Meeting Minutes</title>
     <meta charset="UTF-8">
@@ -7,138 +8,84 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/icon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/icon/favicon-16x16.png">
     <link rel="manifest" href="/icon/">
+    <link rel="stylesheet" href="index.css"> 
   </head>
-  <body>
-    <header>
-        <h1>Meeting 1</h1>
-        <h3>Adam's Movie</h3>
-        <h3>Tuesday 4/9/24</h3>
-        <nav> 
-            <a href="#">Home</a> | 
-            <a href="#attendance">Attendance</a> | 
-            <a href="#agenda">Agenda</a> | 
-            <a href="#lastmeeting">Unfinished Business</a> |
-            <a href="#thismeeting">New Business</a> |
-            <a href="#feedback">Feedback</a> |
-            <a href="#recording">Recording</a>
-        </nav>
-    </header>
-    <main>
-        <br>
-        <hr>
-        <h2 id="attendance">Attendance</h2>
+
+  <div class="container"> 
+    <!--Row 1: Navigation-->
+    <nav class="nav"> 
+        <input type="checkbox" id="nav-checkbox" class="nav-checkbox">
+        <label for="nav-checkbox" class="nav-toggle">
+            <svg class="menu" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <path d="M4 6l16 0" />
+                <path d="M4 12l16 0" />
+                <path d="M4 18l16 0" />
+            </svg>
+            <svg class="close" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <path d="M18 6l-12 12" />
+                <path d="M6 6l12 12" />
+            </svg>
+        </label>
+        <ul>
+            <li>
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star-filled" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffbf00" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M8.243 7.34l-6.38 .925l-.113 .023a1 1 0 0 0 -.44 1.684l4.622 4.499l-1.09 6.355l-.013 .11a1 1 0 0 0 1.464 .944l5.706 -3l5.693 3l.1 .046a1 1 0 0 0 1.352 -1.1l-1.091 -6.355l4.624 -4.5l.078 -.085a1 1 0 0 0 -.633 -1.62l-6.38 -.926l-2.852 -5.78a1 1 0 0 0 -1.794 0l-2.853 5.78z" stroke-width="0" fill="currentColor" />
+                    </svg>
+                </a>
+            </li>
+            <li> 
+                <a href="#">Home</a>
+            </li>
+            <li>
+                <a href="#attendance">Overview</a>
+            </li>
+            <li>
+                <a href="#current-business">Current</a>
+            </li>
+            <li>
+                <a href="#summary">Summary</a>
+            </li>
+            <li>
+                <a href="#feedback">Feedback</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!--Row 2: attendance, agenda, action items-->
+    <section id="attendance"> 
+        <h2>Attendance</h2>
         <ul>
             <li>Rona Darabi</li>
-            <li>Adam Kesher</li>
-            <li>Mr. Darby</li>
-            <li>Robert Smith</li>
-            <li>Castigliane brothers</li>
         </ul>
-        <hr>
-        <h2 id="agenda"> Agenda</h2>
-            <ol>
-                <li>Recap of last meeting</li>
-                <li>Hospitality standards</li>
-                <li>Casting of Adam's lead actress</li>
-            </ol>
-        <hr>
-        
-        <h2 id="lastmeeting">Unfinished businesss</h2>
-        <section>
-            <h3>Recap</h3>
-            <p>Adam is shooting a new movie through Ryan Entertainment. His lead actress just fell through.</p>
-        </section>
-        <section>
-            <h3>Hospitality standards</h3>
-            <p>Espresso must be of the highest quality. Deliver with a napkin.</p>
-        </section>
-        <hr>
-        
-        <h2 id="thismeeting">New business</h2>
-        <section>
-            <h3>Casting of Adam's lead actress</h3>
-            <p>Castigliane brothers push for <strong>Camilla Rhodes</strong> Rhodes to be cast. Adam Kesher is not in agreement.</p>
-            <p>Her headshot is provided below.</p>
-            <img src="media/camillarhodes.jpg" alt="Camilla Headshot">
-        </section>
-        <div class="action-items">
-            <h3><span>Action Items</span></h3>
-            <ul>
-                <li>Follow directions from Castigliane brothers</li>
-            </ul>
-        </div>
-        <h3>Summary</h3>
-        <details>
-            <summary>Find a <span>summary</span> of the meeting below</summary>
-            <p>Adam is being pressured to cast Camilla Rhodes as the lead actress in his new film despite <em>very famous, prominent</em> actresses vying for the role.</p>
-        </details>
-        <br>
-        <hr>
-        
-        <h2 id="feedback">Feedback</h2>
-        <p>Please fill this out to provide feedback and set a time for the next meeting.</p>
-        <form> 
-            <fieldset> 
-                <h3>Information</h3>
-                    <label for="name">Full name:</label>
-                    <input type="text" id="name" name="name"><br><br>
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email"><br><br>
-                    <label for="date">Today's date:</label>
-                    <input type="date" id="date" name="date"><br><br>
-                
-                <h3>Next Meeting</h3>
-                <p>We are looking to have Meeting 2 next week on Tuesday 4/16. Select the time(s) that work for you.</p>
-                <input type="checkbox" id="3" name="3">
-                <label for="3">3 PM</label>
-                <input type="checkbox" id="4" name="4">
-                <label for="4">4 PM</label>
-                <input type="checkbox" id="5" name="5">
-                <label for="5">5 PM</label>
-                <input type="checkbox" id="6" name="6">
-                <label for="6">6 PM</label>
-                <input type="checkbox" id="7" name="7">
-                <label for="7">7 PM</label>
-                
-                <br><br>
-                <label for="time">What is your most preferred time?</label>
-                <input list="times" name="time" id="time">
-                <datalist id="times">
-                    <option value="3 PM">
-                    <option value="4 PM">
-                    <option value="5 PM"> 
-                    <option value="6 PM">
-                    <option value="7 PM">
-                    <option value="8 PM">
-                </datalist>
-                    
-                <h3>Feedback</h3>
-                    <label for="rating">How was the meeting? Please rate from 1 (<i>awful</i>) to 5 (<i>awesome!</i>)</label> 
-                    <select id="rating">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                    </select>
-                    <br><br>
-                    <p>Do you wish for your feedback to remain <b>anonymous</b>?</p>
-                    <input type="radio" id="yes" name="yes">
-                    <label for="yes">Yes</label>
-                    <input type="radio" id="no" name="no"> 
-                    <label for="no">No</label> 
-                    <br><br>
-                    <label for="feedtext">Do you have suggestions?</label><br>
-                    <textarea id="feedtext" name="feedtext" rows="4" cols="50">Provide feedback here.</textarea>
-                    <br><br>
-                    <button type="submit">Submit</button>
-            </fieldset>
-        </form>
-        <br>
-        <hr>
-        
-        <h2 id="recording">Recording</h2>
-        <p>Please find the audio and video files of this meeting below.</p>
+    </section>
+    <section id="agenda"> 
+        <h2>Agenda</h2>
+        <ul>
+            <li>Item 1</li>
+        </ul>
+    </section>
+    <section id="action-items"> 
+        <h2>Action Items</h2>
+        <ul>
+            <li>Item 1</li>
+        </ul>
+    </section>
+
+    <!--Row 3: Main-->
+    <section id="main"> 
+        <h2>Item</h2>
+    </section>
+
+    <!--Row 4: Summary-->
+    <section id="summary">
+        <h2>Summary</h2>
+    </section>
+    
+    <section id="av">
         <audio controls> 
             <source src="media/audio1140060813.m4a" type="audio/mp4"> 
             Your browser does not support the audio tag. 
@@ -148,9 +95,65 @@
             <source src="media/video1140060813.mp4" type="video/mp4"> 
             Your browser does not support the video tag. 
         </video>
-    </main>
+    </section>
+
+    <!--Row 5: Feedback Form-->
+    <section id="feedback">
+        <h2>Feedback</h2>
+        <form> 
+            <fieldset> 
+                    <label for="name">Full name:</label>
+                    <input type="text" id="name" name="name"><br><br>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email"><br><br>
+                    <label for="rating">
+                        How was the meeting? 
+                        Please rate from 1 (<i style="color: color(xyz 55 20 20)">awful</i>) 
+                        to 5 (<i style="color: color-mix(in lch,teal 40%, seagreen);">awesome</i>)
+                    </label> 
+                    <br>
+
+                    <!--Rating WIP-->
+                    <fieldset class="rating">
+                        <input type="radio" id="0" name="rating" value="0">
+                        <label for="0" class="star" value="0"></label>
+                        
+                        <input type="radio" id="1" name="rating" value="1">
+                        <label for="1" class="star" value="1"><span class="s">★</span></label>
+                        
+                        <input type="radio" id="2" name="2"> 
+                        <label for="2" value="2" class="star"><span class="s">★</span></label> 
+                        
+                        <input type="radio" id="3" name="3">
+                        <label for="3" value="3" class="star"><span class="s">★</span></label>
+                        
+                        <input type="radio" id="4" name="4"> 
+                        <label for="4" value="4" class=star><span class="s">★</span></label> 
+                        
+                        <input type="radio" id="5" name="5">
+                        <label for="5" value="5" class="star"><span class="s">★</span></label>
+                    </fieldset>
+
+                    <br><br>
+                    <label for="feedtext">Do you have suggestions?</label><br>
+                    <textarea id="feedtext" name="feedtext" rows="4" cols="50">Provide feedback here.</textarea>
+                    <br><br>
+                    <button type="submit">Submit</button>
+            </fieldset>
+        </form>
+    </section>   
+
+    <!--Row 6: Footer-->
     <footer>
         <p>Site made by Rona Darabi</p>
     </footer>
-  </body>
+</div>
+
+<style>
+    footer { 
+        text-align: center;
+        padding: .5rem 0 .5rem 0;
+    }
+</style>
+
 </html>

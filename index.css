@@ -1,0 +1,164 @@
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+
+:scope { 
+    background-color: lavender;
+    height: 100vh; 
+    width: 100vw;
+    margin: unset;
+}
+
+body { 
+    margin: unset;
+    height: 100vh;
+    width: 100vw;
+    margin-left:0;
+    margin-right:0;
+    margin-bottom:1%;
+    margin-top:1%;
+    font-family: "Ubuntu", sans-serif;
+
+}
+
+/* Navigation bar */
+.nav { 
+    color: #000;
+    position: relative;
+
+    & .nav-toggle { 
+        position: absolute; 
+        cursor: pointer; 
+        margin: 0rem 1rem; 
+        right: 0;
+
+        svg { 
+            width: 1.5rem;
+        }
+
+        .close { 
+            display: none;
+        }
+
+        .menu { 
+            margin-top: 0.2rem; 
+        }
+    }
+
+    & .nav-checkbox { 
+        display: none;
+    }
+
+    & ul { 
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center; 
+        margin: 1rem; 
+
+        li { 
+            list-style: none;
+            display: none;
+
+            &:first-child { 
+                margin-right: auto;
+                display: block;
+            }
+        }
+    }
+
+    & a { 
+        color: inherit;
+        text-decoration: none;
+        font-size: 1rem;
+        padding: 1rem;
+    }
+    & a:hover{ 
+        color: rgb(85, 85, 184); 
+    }
+    
+    svg { 
+        width: 1.5rem;
+    }
+
+}
+
+#nav-checkbox:checked ~ ul li { 
+    display: block;
+}
+
+#nav-checkbox:checked ~ label.nav-toggle .close { 
+    display: block;
+}
+
+#nav-checkbox:checked ~ label.nav-toggle .menu { 
+    display: none;
+}
+
+
+
+/* Responsive design */
+/* Desktop */ 
+@media screen and (min-width: 560px) { 
+    .nav {
+        background: lightcyan;
+        grid-area: nav;
+        & .nav-toggle { 
+            display: none;
+        }
+        & ul { 
+            flex-direction: row;
+
+            li { 
+                display: block;
+            }
+        }
+    }
+
+    .container { 
+        display: grid; 
+        height: 100vh; 
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: .2fr 1fr 1fr 1fr 1fr .8fr;  
+        grid-template-areas: 
+            "nav nav nav"
+            "attendance agenda action-items"
+            "main main main"
+            "summary summary av"
+            "feedback feedback feedback"
+            "footer footer footer";
+        grid-gap: 0.2rem;
+    }
+    #attendance { 
+        background: green;
+        grid-area: attendance;
+    }
+    #agenda { 
+        background: teal;
+        grid-area: agenda;
+    }
+    #action-items { 
+        background: lightseagreen;
+        grid-area: action-items;
+    }
+    #main { 
+        background: lightskyblue;
+        grid-area: main;
+    }
+    #summary { 
+        background: lightgreen; 
+        grid-area: summary;
+    }
+    #av { 
+        background: seagreen;
+        grid-area: av;
+    }
+    #feedback { 
+        background: lightblue;
+        grid-area: feedback;
+    }
+    footer { 
+        background: lavenderblush;
+        grid-area: footer;
+    }
+}
